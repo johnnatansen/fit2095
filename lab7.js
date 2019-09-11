@@ -141,10 +141,10 @@ app.post('/delete', function (request, response) {
     Task.deleteOne({ _id: request.body.deleteID }, function (err, doc) {
         console.log(doc);
 
-        // Task.where({}).exec(function (err, docs) {
-        //     response.render('listTask.html', {taskDb: docs});
-        // })
-        response.redirect('listtasks')
+         Task.where({}).exec(function (err, docs) {
+             response.render('listTask.html', {taskDb: docs});
+         })
+        
 
       });        
 });

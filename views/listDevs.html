@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <h1>
+            <a href="/">home</a>
+            <a href="/newtask">add new task</a>
+            <a href="/listtasks">list all task</a>
+            <a href="/newDev">add new developer</a>
+            <a href="/updateTask">update tasks</a>
+            <a href="/deleteTask">delete tasks</a>  
+        </h1>
+
+        <table border="1">
+                <tr>
+                    <td>dev id</td>
+                    <td>first name</td>
+                    <td>last name</td>
+                    <td>level</td>
+                    <td>state</td>
+                    <td>suburb</td>
+                    <td>street</td>
+                    <td>unit</td>
+                </tr>
+
+                <% for ( var i =0; i< devDb.length;i++){ %>
+                    <tr>
+                            <td><%= devDb[i]._id %></td>
+                            <td><%= devDb[i].name.firstName %></td>
+                            <td><%= devDb[i].name.lastName %></td>
+                            <td><%= devDb[i].level %></td>
+                            <td><%= devDb[i].address.state %></td>
+                            <td><%= devDb[i].address.suburb %></td>
+                            <td><%= devDb[i].address.street %></td>
+                            <td><%= devDb[i].address.unit %></td>
+                    </tr>
+                <% }%>
+
+
+
+
+        </table>
+
+
+    </body>
+</html>

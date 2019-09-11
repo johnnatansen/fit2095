@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div>
+            <h1>
+                <a href="/">home</a> 
+                <a href="/listtasks">list all task</a>
+                <a href="/newDev">add new developer</a>
+                <a href="/listDev">list all developer</a>
+                <a href="/updateTask">update tasks</a>
+                <a href="/deleteTask">delete tasks</a>
+            </h1>
+        </div>
+        
+
+        <form action="/data" method="POST">
+            Task Name:
+            <input type="text" name="taskName" /> </br>
+            Assign to:
+            <input type="text" name="assignTo" /> </br>
+            Task Due:
+            <input type="date" name="taskDue" /> </br>
+            Task desc:
+            <input type="text" name="taskDesc" /> </br>
+            <button>Submit</button>
+        </form>
+
+        
+
+
+    </body>
+</html>
